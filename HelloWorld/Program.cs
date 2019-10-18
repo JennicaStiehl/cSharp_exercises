@@ -2,7 +2,12 @@
 
 namespace HelloWorld
 {
-
+    public enum ShippingMethod
+    {
+        RegularAirMail = 1,
+        RegisteredMail = 2,
+        Express = 3
+    }
     class Program
     {
         static void Main(string[] args)
@@ -29,6 +34,15 @@ namespace HelloWorld
 
             var names = new string[3] { "jack", "jan", "joe" };
             Console.WriteLine(names[0]);
+            //var mosh = new Person("Mosh", "Hamdani");
+            //mosh.Introduce();
+            var method = ShippingMethod.Express;
+            Console.WriteLine(method);
+            var methodId = 3;
+            Console.WriteLine((ShippingMethod)methodId);
+            Console.WriteLine(method.ToString());
+            var methodName = "Express";
+            var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
         }
     }
 

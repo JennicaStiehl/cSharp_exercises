@@ -9,4 +9,7 @@
     <Folder Include="Math\" />
     <Folder Include="Struct\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Strings\Template.cs" />
+  </ItemGroup>
 </Project>
